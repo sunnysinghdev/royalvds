@@ -1,0 +1,27 @@
+<div id="{{slideId}}" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+
+        <li attr.data-target="#{{slideId}}" attr.data-slide-to="{{i}}" class="{{isFirst ? 'active': ''}}"
+            *ngFor="let item of imageList; index as i; first as isFirst"></li>
+    </ul>
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+
+        <div class="carousel-item {{isFirst ? 'active': ''}}" *ngFor="let item of imageList; first as isFirst">
+            <img src="{{item}}" style="max-width: 100%" alt="{{item}}">
+        </div>
+
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#{{slideId}}" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#{{slideId}}" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+    </div>
+</div>

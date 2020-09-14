@@ -1,0 +1,11 @@
+<div class="row stripClass">
+    <div class="col-sm-{{12/total}}" *ngFor="let item of data;count as total;">
+        <div class="part">
+            <div class="part-image"><span class="{{item.icon}}"></span></div>
+            <div class="part-content">
+                <h4>{{item.title}}</h4>
+                <p>{{item.detail}}</p>
+            </div>
+        </div>
+    </div>
+</div>

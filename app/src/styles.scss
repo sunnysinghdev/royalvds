@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'variables.scss';
+
+.theme {
+    color: $primary-color; 
+    background-color: $primary-back-color;
+    p {
+        color: $primary-light-color;
+    }
+}
+.theme-inverse {
+    color: $primary-back-color;
+    background-color: $primary-color; 
+    p {
+        color: $primary-light-color;
+    }
+
+}
+.row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
