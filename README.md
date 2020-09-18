@@ -1,9 +1,13 @@
-# ROYALVDS Industries Private Limited.
+# Royalvds
 
-## Coming Soon.....
+## Stage packages
+`npm install`
 
-A website for Royal VDS Industires private limited.
+## Serve on Localhost
+`ng serve --open`
 
-![ganpati](https://c1.wallpaperflare.com/preview/220/427/792/ganpati-ganesha-chaturthi-lord.jpg)
+## Build for Production
+`ng build --prod --base-href=""`
 
-Copyright (c) 2020 ROYALVDS.com
+## Deploy
+Manually upload files and folder to hosting site.

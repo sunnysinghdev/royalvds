@@ -25,17 +25,17 @@ export class HomeComponent implements OnInit {
     },
   ];
   slideShowImages = [
-    "./assets/images/carousel/w (1).jpg",
-    "./assets/images/carousel/w (2).jpg",
-    "./assets/images/carousel/w (3).jpg",
-    "./assets/images/carousel/w (4).jpg",
-    "./assets/images/carousel/w (5).jpg",
-    "./assets/images/carousel/w (6).jpg",
-    "./assets/images/carousel/w (7).jpg",
-    "./assets/images/carousel/w (8).jpg",
-    "./assets/images/carousel/w (9).jpg",
-    "./assets/images/carousel/w (10).jpg",
-    "./assets/images/carousel/w (11).jpg",
+    "./assets/images/carousel/1.jpg",
+    "./assets/images/carousel/2.jpg",
+    "./assets/images/carousel/3.jpg",
+    "./assets/images/carousel/4.jpg",
+    "./assets/images/carousel/5.jpg",
+    "./assets/images/carousel/6.jpg",
+    "./assets/images/carousel/7.jpg",
+    "./assets/images/carousel/8.jpg",
+    "./assets/images/carousel/9.jpg",
+    "./assets/images/carousel/10.jpg",
+    "./assets/images/carousel/11.jpg",
 
   ];
   contactStripData = [
@@ -52,7 +52,7 @@ export class HomeComponent implements OnInit {
     {
       icon: 'mdi mdi-map',
       title: 'Need services? Our Address',
-      detail: "B/125,BIRLA COLONY,FRONT OF DURGA MANDIR, PHULWARISHARIF, PATNA, PATNA Patna BR 801505 IN"
+      detail: "B/125,BIRLA COLONY, PHULWARISHARIF, PATNA, BR 801505."
     },
   ]
   constructor() { }
