@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
+import { AppService } from '../app.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -54,10 +55,43 @@ export class HomeComponent implements OnInit {
       title: 'Need services? Our Address',
       detail: "B/125,BIRLA COLONY, PHULWARISHARIF, PATNA, BR 801505."
     },
-  ]
-  constructor() { }
- 
+  ];
+  msgEmail = "";
+  constructor(private http: HttpClient, public appService: AppService) {
+
+  }
+
   ngOnInit() {
+
+  }
+  sendMail() {
+    let messsage = this.emailFormat("Sunny", "994994994", "user@xyz.com", "Hi we need interior design.");
+    this.msgEmail = messsage;
+    this.appService.sendMail("Customer Query", messsage);
+  }
+  emailFormat(name, phone, email, msg){
+    return `<html>
+    <body>
+      <table>
+        <tr style="background-color:lightgrey;">
+          <td>Name</td>
+          <td>${name}</td>
+        </tr>
+        <tr>
+          <td>Phone</td>
+          <td>${phone}</td>
+        </tr>
+        <tr style="background-color:lightgrey;">
+          <td>Name</td>
+          <td>${email}</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>${msg}</td>
+        </tr>
+      </table>
+    </body>
+    </html>`;
   }
 
 }
