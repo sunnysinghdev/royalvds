@@ -8,7 +8,7 @@ export class AppService {
 
   constructor(public http: HttpClient) { }
 
-  sendMail(subject, message) {
+  sendMail(subject, message): Promise<any> {
     let body = {
       "from": "Interior Query<user@sunnysingh.in>",
       "to": "sunnysingh.vpcoe@gmail.com",
@@ -16,9 +16,13 @@ export class AppService {
       "subject": subject,
       "message": message
     }
-    this.http.post("http://localhost:8080/sendmail", body).subscribe((res: any)=>{
-    //this.http.post("https://mailwaala.herokuapp.com/sendmail", body).subscribe((res: any) => {
-      console.log(body);
+    return new Promise((resolve)=>{
+      //this.http.post("http://localhost:8080/sendmail", body).subscribe((res: any)=>{
+      this.http.post("https://mailwaala.herokuapp.com/sendmail", body).subscribe((res: any) => {
+        console.log(res);
+        resolve(res);
+      });
     });
+    
   }
 }
