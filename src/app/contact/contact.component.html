@@ -68,6 +68,7 @@
             </div>
 
             <button class="btn btn-primary float-right" (click)="sendMail()">Send <i class="mdi mdi-trending-neutral"></i></button>
+            <small class="form-text text-success"*ngIf="successSendMail">*{{errorMessage}}</small>
         </div>
     </div>
 

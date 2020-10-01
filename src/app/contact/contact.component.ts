@@ -17,6 +17,7 @@ export class ContactComponent implements OnInit {
   phoneError = false;
   emailError = false;
   messageError = false;
+  successSendMail = false;
   errorMessage = "";
   constructor(private appService: AppService) {
 
@@ -29,6 +30,7 @@ export class ContactComponent implements OnInit {
     this.phoneError = false;
     this.emailError = false;
     this.messageError = false;
+    this.successSendMail = false;
     if (this.name == '') {
       this.nameError = true;
       this.errorMessage = "Name required";
@@ -51,6 +53,16 @@ export class ContactComponent implements OnInit {
     }
     let emailMsg = this.emailFormat(this.name, this.phone, this.email, this.message);
     this.appService.sendMail("Customer Query", emailMsg).then((res) => {
+      this.nameError = false;
+      this.phoneError = false;
+      this.emailError = false;
+      this.messageError = false;
+      this.successSendMail = true;
+      this.name = '';
+      this.phone = '';
+      this.email = '';
+      this.message = 'Hi Team, I would like to know more about interior design and estimate cost.';
+      this.errorMessage = "Email sent successfully!!! Thank you for contacting us.";
 
     });
   }
