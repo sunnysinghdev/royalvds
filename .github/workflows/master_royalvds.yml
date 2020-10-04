@@ -19,8 +19,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '12.13.0'
-
-    - name: npm install, build, and test
+        
+    - name: npm install angular or dev dependencies.
+      run: |
+        npm install --only=dev
+        
+    - name: npm install and build prod
       run: |
         npm install
         ng build --prod --base-href=""
