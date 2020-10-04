@@ -20,14 +20,13 @@ jobs:
       with:
         node-version: '12.13.0'
         
-    - name: npm install angular or dev dependencies.
-      run: |
-        npm install --only=dev
-        
-    - name: npm install and build prod
+    - name: npm install dependencies.
       run: |
         npm install
-        ng build --prod --base-href=""
+        
+    - name: npm build
+      run: |
+        ng run build
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
