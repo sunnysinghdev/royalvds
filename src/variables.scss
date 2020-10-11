@@ -1,5 +1,10 @@
-$primary-color: green; //gold;
-$primary-back-color:lightgray;// black;
+$apple-green: #88c000ff;
+$green-lizard: #acf300ff;
+
+
+$primary-color: $green-lizard; //gold;
+$primary-color-dark: $apple-green; //gold;
+$primary-back-color: black;
 $primary-dark-color: #343a40;
 $primary-light-color: lightgray;
 

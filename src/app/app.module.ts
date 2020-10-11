@@ -12,6 +12,7 @@ import { SlideShowComponent } from './slide-show/slide-show.component';
 import { StripComponent } from './strip/strip.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ThemerComponent } from './themer/themer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     SlideShowComponent,
-    StripComponent
+    StripComponent,
+    ThemerComponent
   ],
   imports: [
     BrowserModule,

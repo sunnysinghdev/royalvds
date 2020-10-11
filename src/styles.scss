@@ -2,7 +2,7 @@
 @import 'variables.scss';
 
 .theme {
-    color: $primary-color; 
+    color: $primary-color;
     background-color: $primary-back-color;
     p {
         color: $primary-light-color;
@@ -10,7 +10,7 @@
 }
 .theme-inverse {
     color: $primary-back-color;
-    background-color: $primary-color; 
+    background-color: $primary-color;
     p {
         color: $primary-light-color;
     }
